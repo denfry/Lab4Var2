@@ -163,6 +163,16 @@ public class AppliancesTableApp extends Application {
 
     private void addAppliance() {
         try {
+            String name = nameTextField.getText();
+            String company = companyTextField.getText();
+            double price = Double.parseDouble(priceTextField.getText());
+            int capacity = Integer.parseInt(capacityTextField.getText());
+            boolean isOn = isOnCheckBox.isSelected();
+
+            Appliances appliance;
+            appliance = new Appliances(name, company, price, capacity, isOn);
+
+            appliances.add(appliance);
             nameTextField.clear();
             priceTextField.clear();
             companyTextField.clear();

@@ -101,7 +101,6 @@ public class AppliancesTableApp extends Application {
                     setText(String.valueOf(item));
                     int capacityValue = item;
 
-                    // Здесь задайте условия для изменения цвета фона в зависимости от значения capacity
                     if (capacityValue >= 20) {
                         setStyle("-fx-background-color: lightgreen;");
                     } else {

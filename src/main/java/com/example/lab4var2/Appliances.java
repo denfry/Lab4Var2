@@ -5,13 +5,13 @@ public class Appliances {
     private String company;
     private double price;
     private int capacity;
-    private boolean isOn;
-    public Appliances(String name, String company, double price, int capacity, boolean isOn) {
+    private String applianceType;
+    public Appliances(String name, String company, double price, int capacity, String applianceType) {
         this.name = name;
         this.company = company;
         this.price = price;
         this.capacity = capacity;
-        this.isOn = isOn;
+        this.applianceType = applianceType;
     }
     public String getName() {
         return name;
@@ -25,9 +25,10 @@ public class Appliances {
     public int getCapacity() {
         return capacity;
     }
-    public boolean getIsOn() {
-        return isOn;
+    public String getApplianceType() {
+        return applianceType;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -40,11 +41,12 @@ public class Appliances {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    public void setIsOn(boolean isOn) {
-        this.isOn = isOn;
+    public void setApplianceType(String applianceType) {
+        this.applianceType = applianceType;
     }
+
     public String toString() {
         return "Название: " + getName() + ", " + "Производитель: " + getCompany() + ", " +  "Цена: " + getPrice() + ", \n"
-                + "" + "Вместимость: " + getCapacity() + ", " +  "Включен: " + getIsOn();
+                + "" + "Вместимость: " + getCapacity();
     }
 }
